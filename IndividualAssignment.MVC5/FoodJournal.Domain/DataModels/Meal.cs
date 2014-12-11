@@ -10,6 +10,7 @@ namespace FoodJournal.Domain
     }
     public partial class Meal
     {
+        public int ID { get; set; }
         public MealType MealType { get; set; }
         public string Name { get; set; }
         public virtual ICollection<Foodstuff> Foodstuffs { get; set; } 

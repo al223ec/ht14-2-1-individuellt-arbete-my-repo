@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,11 @@ namespace FoodJournal.Domain
 {
     public partial class NutrientValues
     {
-        public int ID { get; set; }
-        /*
+        [Key]
+        [ForeignKey("Foodstuff")]
         public int FoodstuffID { get; set; }
-
-        [ForeignKey("FoodstuffID")]
         public virtual Foodstuff Foodstuff { get; set; }
-         * */
+
         public int EnergyKj { get; set; }
         public int EnergyKcal { get; set; }
         public int Protein { get; set; }
