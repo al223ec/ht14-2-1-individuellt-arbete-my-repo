@@ -117,8 +117,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FoodJournalController.cs" />
-    <Compile Include="DAL\FoodJournalContext.cs" />
-    <Compile Include="DAL\FoodJournalInitializer.cs" />
     <Compile Include="HtmlHelpers\HtmlDropDownExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

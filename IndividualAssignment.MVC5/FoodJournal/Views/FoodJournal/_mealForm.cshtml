@@ -23,13 +23,42 @@
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div class="col-md-10">
+                <table>
+                    <tr>
+                        @{
+                        int cnt = 0;
+                        List<FoodJournal.ViewModels.MealFoodstuffData> foodstuffs = ViewBag.Foodstuffs;
+
+                        foreach (var foodstuff in foodstuffs)
+                        {
+                            if (cnt++ % 3 == 0)
+                            {
+                                @:</tr><tr>
+                            }
+                                    @:<td>
+                                        <input type="checkbox"
+                                               name="selectedFoodstuff"
+                                               value="@foodstuff.FoodstuffID"
+                                               @(Html.Raw(foodstuff.Selected ? "checked=\"checked\"" : "")) />
+                                        @foodstuff.FoodstuffID @:  @foodstuff.Name
+                                        @:</td>
+                                    }
+                                @:</tr>
+                            }
+                </table>
             </div>
         </div>
-    </div>
+
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
 }
 
 @section Scripts {

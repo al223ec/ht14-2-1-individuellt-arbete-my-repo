@@ -24,7 +24,6 @@ namespace FoodJournal.Domain
                 rawJson = reader.ReadToEnd();
             }
 
-            // Parse the JSON and return a list with tweets.
             return JArray.Parse(rawJson).Select(t => new Foodstuff(t)).ToList();
         }
         public IEnumerable<Foodstuff> GetFoodstuff(int number)
