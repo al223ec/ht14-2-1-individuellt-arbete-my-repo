@@ -1,0 +1,18 @@
+C:\Users\Anton\Documents\GitHub\ht14-2-1-individuellt-arbete\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\FoodJournal.Domain.dll
+C:\Users\Anton\Documents\GitHub\ht14-2-1-individuellt-arbete\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\FoodJournal.Domain.pdb
+C:\Users\Anton\Documents\GitHub\ht14-2-1-individuellt-arbete\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Anton\Documents\GitHub\ht14-2-1-individuellt-arbete\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Anton\Documents\GitHub\ht14-2-1-individuellt-arbete\IndividualAssignment.MVC5\FoodJournal.Domain\obj\Debug\FoodJournal.Domain.dll
+C:\Users\Anton\Documents\GitHub\ht14-2-1-individuellt-arbete\IndividualAssignment.MVC5\FoodJournal.Domain\obj\Debug\FoodJournal.Domain.pdb
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\FoodJournal.Domain.dll
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\FoodJournal.Domain.pdb
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\obj\Debug\FoodJournal.Domain.dll
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\obj\Debug\FoodJournal.Domain.pdb
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\FoodJournal.Domain.dll.config
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\obj\Debug\FoodJournal.Domain.csprojResolveAssemblyReference.cache
