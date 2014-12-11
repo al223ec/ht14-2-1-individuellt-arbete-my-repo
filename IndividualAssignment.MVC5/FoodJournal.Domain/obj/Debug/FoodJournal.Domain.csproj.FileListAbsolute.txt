@@ -15,4 +15,3 @@ C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-
 C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\EntityFramework.xml
 C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Anton\Google Drive\Webbprogrammering Kalmar\År 2\ASP.NET MVC\ht14-2-1-individuellt-arbete-my-repo\IndividualAssignment.MVC5\FoodJournal.Domain\obj\Debug\FoodJournal.Domain.csprojResolveAssemblyReference.cache

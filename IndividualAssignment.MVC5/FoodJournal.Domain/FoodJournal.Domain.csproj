@@ -53,10 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataModels\Meal.cs" />
+    <Compile Include="DAL\IRepository.cs" />
+    <Compile Include="DAL\RepositoryBase.cs" />
+    <Compile Include="DbEntities\Meal.cs" />
     <Compile Include="Foodstuff.cs" />
-    <Compile Include="DataModels\Foodstuff.cs" />
-    <Compile Include="DataModels\NutrientValues.cs" />
+    <Compile Include="DbEntities\Foodstuff.cs" />
+    <Compile Include="DbEntities\NutrientValues.cs" />
     <Compile Include="Meal.cs" />
     <Compile Include="NutrientValues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
