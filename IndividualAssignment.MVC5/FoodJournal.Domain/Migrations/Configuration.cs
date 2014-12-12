@@ -1,6 +1,7 @@
 namespace FoodJournal.Domain.Migrations
 {
     using FoodJournal.Domain.DAL;
+    using FoodJournal.Domain.Webservices;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -10,7 +11,9 @@ namespace FoodJournal.Domain.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            //tillåter att man dropar data, detta bör sättas till true om man kör Update-Database 
+            AutomaticMigrationDataLossAllowed = false;
             ContextKey = "FoodJournal.Domain.DAL.FoodJournalContext";
         }
 

@@ -6,9 +6,15 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodJournal", "FoodJournal\FoodJournal.csproj", "{C4E0A7D0-AA84-4852-8163-5EC55ED5CB96}"
 	ProjectSection(ProjectDependencies) = postProject
 		{8D7A566E-3F3E-440D-B8A3-ED1A504100D1} = {8D7A566E-3F3E-440D-B8A3-ED1A504100D1}
+		{9426B56F-F27A-43A0-9739-4054059C1F18} = {9426B56F-F27A-43A0-9739-4054059C1F18}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodJournal.Domain", "FoodJournal.Domain\FoodJournal.Domain.csproj", "{8D7A566E-3F3E-440D-B8A3-ED1A504100D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodJournal.Api", "FoodJournal.Api\FoodJournal.Api.csproj", "{9426B56F-F27A-43A0-9739-4054059C1F18}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8D7A566E-3F3E-440D-B8A3-ED1A504100D1} = {8D7A566E-3F3E-440D-B8A3-ED1A504100D1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +30,10 @@ Global
 		{8D7A566E-3F3E-440D-B8A3-ED1A504100D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D7A566E-3F3E-440D-B8A3-ED1A504100D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D7A566E-3F3E-440D-B8A3-ED1A504100D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9426B56F-F27A-43A0-9739-4054059C1F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9426B56F-F27A-43A0-9739-4054059C1F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9426B56F-F27A-43A0-9739-4054059C1F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9426B56F-F27A-43A0-9739-4054059C1F18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

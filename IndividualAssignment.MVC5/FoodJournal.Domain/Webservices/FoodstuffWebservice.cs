@@ -7,11 +7,11 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodJournal.Domain
+namespace FoodJournal.Domain.Webservices
 {
-    public class FoodstuffWebservice
+    public class FoodstuffWebservice : IFoodstuffWebservice
     {
-        public List<Foodstuff> GetFoodstuff()
+        public IEnumerable<Foodstuff> GetFoodstuff()
         {
             var rawJson = string.Empty;
             

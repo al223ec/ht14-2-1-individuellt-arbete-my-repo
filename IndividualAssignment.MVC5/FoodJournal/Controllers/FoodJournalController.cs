@@ -11,7 +11,15 @@ namespace FoodJournal.Controllers
 {
     public class FoodJournalController : Controller
     {
-        private FoodJournalContext db = new FoodJournalContext(); 
+        private IFoodJournalService _service;
+        
+        public FoodJournalController()
+            : this(new FoodJournalService())
+        { }
+        public FoodJournalController(IFoodJournalService service)
+        {
+            _service = service;
+        }
         // GET: FoodJournal
         public ActionResult Index()
         {
@@ -23,7 +31,7 @@ namespace FoodJournal.Controllers
         public ActionResult Create()
         {
             Meal meal = new Meal();
-            meal.Foodstuffs = new List<Foodstuff>();
+            meal.FoodstuffMeals = new List<MealFoodstuffEntry>();
             PopulateMealFoodstuffData(meal); 
 
             return View();
@@ -31,13 +39,13 @@ namespace FoodJournal.Controllers
 
         private void PopulateMealFoodstuffData(Meal meal)
         {
-            var allFoodstuffs = db.Foodstuffs;
+            var allFoodstuffs = _service.GetFoodstuff();
             //var mealFoodstuffs = new HashSet<int>(meal.Foodstuffs.Select(f => f.ID));
-            var viewModel = new List<MealFoodstuffData>();
+            var viewModel = new List<MealFoodstuffEntryData>();
 
             foreach (var foodstuff in allFoodstuffs)
             {
-                viewModel.Add(new MealFoodstuffData
+                viewModel.Add(new MealFoodstuffEntryData
                 {
                     FoodstuffID = foodstuff.ID,
                     Name = foodstuff.Name,
@@ -51,6 +59,7 @@ namespace FoodJournal.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Name, Time, Foodstuffs")]Meal meal)
         {
+            
             try
             {
                 if (ModelState.IsValid)
