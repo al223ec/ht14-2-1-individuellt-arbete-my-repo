@@ -47,10 +47,14 @@ namespace FoodJournal.Domain
             return _unitOfWork.FoodstuffRepository.GetAll(); 
         }
 
-
+        /// <summary>
+        /// Kommer genomföra en request till Matapi.se för att hämta all data som tillhör den specifika foodstuffen. 
+        /// Har denna data redan hämtas läses den ut i samband med att förfrågan sker mot databasen för att hämta foodstuff
+        /// </summary>
+        /// <param name="foodstuff"></param>
+        /// <returns>NutrientValue</returns>
         public NutrientValues GetNutrientValues(Foodstuff foodstuff)
         {
-
             if (foodstuff.NutrientValues == null)
             { 
                 NutrientValues nutrientValues = _webservice.GetNutrientValues(foodstuff.Number);

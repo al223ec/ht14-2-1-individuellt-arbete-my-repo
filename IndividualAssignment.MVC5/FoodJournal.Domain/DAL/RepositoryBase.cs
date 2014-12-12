@@ -61,7 +61,7 @@ namespace FoodJournal.Domain.DAL
 
         public IEnumerable<TEntity> GetAll()
         {
-            return _context.Set<TEntity>().ToList(); 
+            return _set.ToList(); 
         }
     }
 }

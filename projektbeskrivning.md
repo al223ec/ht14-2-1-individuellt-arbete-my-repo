@@ -1,21 +1,46 @@
 <h1>Matdagbok</h1>
 <p>
-	Kommer använda matapi.se för att hämta information om de olika livsmedlens näringsinformation. 
+    Jag tänker göra en matdagbok där en användare kan skapa en måltid och få information om måltidens näringsinnehåll.
+    Jag kommer använda det öppna api:et matapi.se för att hämta information om de olika livsmedlens näringsinformation.
+    Änvändaren ska kunna söka efter ett livsmedel för att sedan kunna lägga till detta till en lista, användaren behöver
+    också ange hur mycket av livsmedlet hen använder.
+</p>
+<p>
+    Applikationen kommer att hämta ut alla livsmedel som finns därefter hämta livsmedlets specifika näringsinnehåll utefter behov. 
+    Livsmedlets näringsinformation kommer därefter att "cachas" i databasen. 
+</p>
+<h3>
+    MatApi.se
+</h3>
+<p>
+    Matapi hämtar sin data från livsmedelsverkets databas.
 </p>
 <h3>Applikationsspecifika krav</h3>
 <ul>
-	<li> 
-		Användaren ska ha full CRUD på måltider.
-	</li>
-	<li> 
-		Användaren ska kunna kopiera en måltid. 
-	</li>
-	<li>
-		En måltid består kan bestå av "rätter" tex köttfärssås
-	</li>
-	<li>
-		Användaren ska kunna lägga till nya livsmedel.
-	</li>
+    <li>
+        Användaren ska ha full CRUD på måltider.
+    </li>
+    <li>
+        Användaren ska kunna kopiera en måltid.
+    </li>
+    <li>
+        En användare kan logga in/logga ut
+    </li>
+    <li>
+        En ny användare kan registrera sig
+    </li>
+</ul>
+<h3>Exktra krav om tid finns</h3>
+<ul>
+    <li>
+        En måltid kan bestå av "rätter"/recept som sparas tex köttfärssås
+    </li>
+    <li>
+        Användaren ska kunna lägga till nya livsmedel.
+    </li>
+    <li>
+
+    </li>
 
 </ul>
 <h3>Betygskrav</h3>
@@ -93,18 +118,19 @@ Betyg 5
 För betyget 5 på det individuella arbetet ska din applikation, förutom kraven som ställs för betyget 4,
 uppfylla nedanstående:
 1. Leveransdatum ("deadlines") ska hållas; det är en förutsättning för ett högre betyg än godkänd (3).
-2. Code First ska tillämpas, d.v.s. klasserna DbContext respektive DbSet<T> ska användas utan att
-du använder ”ADO.NET Entity Data Model” (.edmx-fil). OBS! Detta krav medför att appUser
-måste ha lämpliga rättigheter för att kunna exekvera SQL-satser för INSERT, UPDATE och
-DELETE.
-3. För hantering av webbapplikationens användare och roller ska ASP.NET Identity API användas.
-Exempel på funktionalitet applikationen ska erbjuda listas nedan. Visar det sig att listan inte är
-tillämpbar på din applikation diskutera det i så fall med kursledningen.
-ASP.NET MVC (1DV409) 7 (8)a) Användare ska kunna autentiseras.
-b) Användares åtkomst av resurser ska styras med hjälp av roller.
-c) En användares autentiseringsuppgifter ska kunna skapas, antingen genom självregistrering
-eller genom att en administratör gör det.
-d) Användare ska kunna logga in och logga ut.
-e) Användare ska kunna ändra sitt lösenord.
-f) En lista med de fem senaste platserna användaren begärt en prognos för ska kunna visas för
-användaren. Användaren ska kunna ta bort en plats ur listan.
+2. Code First ska tillämpas, d.v.s. klasserna DbContext respektive DbSet<t>
+    ska användas utan att
+    du använder ”ADO.NET Entity Data Model” (.edmx-fil). OBS! Detta krav medför att appUser
+    måste ha lämpliga rättigheter för att kunna exekvera SQL-satser för INSERT, UPDATE och
+    DELETE.
+    3. För hantering av webbapplikationens användare och roller ska ASP.NET Identity API användas.
+    Exempel på funktionalitet applikationen ska erbjuda listas nedan. Visar det sig att listan inte är
+    tillämpbar på din applikation diskutera det i så fall med kursledningen.
+    ASP.NET MVC (1DV409) 7 (8)a) Användare ska kunna autentiseras.
+    b) Användares åtkomst av resurser ska styras med hjälp av roller.
+    c) En användares autentiseringsuppgifter ska kunna skapas, antingen genom självregistrering
+    eller genom att en administratör gör det.
+    d) Användare ska kunna logga in och logga ut.
+    e) Användare ska kunna ändra sitt lösenord.
+    f) En lista med de fem senaste platserna användaren begärt en prognos för ska kunna visas för
+    användaren. Användaren ska kunna ta bort en plats ur listan.
