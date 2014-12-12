@@ -9,7 +9,8 @@ namespace FoodJournal.Domain.DAL
     public interface IUnitOfWork : IDisposable
     {
         IRepository<Foodstuff> FoodstuffRepository { get; }
-
+        IRepository<Meal> MealRepository { get; }
+        IRepository<NutrientValues> NutrientValuesRepository { get; }
         void Save();
     }
 }

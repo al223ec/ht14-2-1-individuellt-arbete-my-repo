@@ -30,5 +30,22 @@ namespace FoodJournal.Domain.Webservices
         {
             throw new NotImplementedException();
         }
+
+        public NutrientValues GetNutrientValues(int number)
+        {
+            var rawJson = string.Empty;
+
+            var requestUriString = String.Format("http://www.matapi.se/foodstuff/{0}", number);
+            var request = (HttpWebRequest)WebRequest.Create(requestUriString);
+
+            using (var response = request.GetResponse())
+            using (var reader = new StreamReader(response.GetResponseStream()))
+            {
+                rawJson = reader.ReadToEnd();
+            }
+
+            JToken token = JObject.Parse(rawJson);
+            return new NutrientValues(token.SelectToken("nutrientValues")); 
+        }
     }
 }

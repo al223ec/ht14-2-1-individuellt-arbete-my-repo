@@ -13,7 +13,7 @@ namespace FoodJournal.Domain.Migrations
         {
             AutomaticMigrationsEnabled = true;
             //tillåter att man dropar data, detta bör sättas till true om man kör Update-Database 
-            AutomaticMigrationDataLossAllowed = false;
+            AutomaticMigrationDataLossAllowed = true;
             ContextKey = "FoodJournal.Domain.DAL.FoodJournalContext";
         }
 
@@ -22,7 +22,9 @@ namespace FoodJournal.Domain.Migrations
             FoodstuffWebservice _service = new FoodstuffWebservice();
             var foodstuffs = _service.GetFoodstuff();
             foodstuffs.ToList().ForEach(f => context.Foodstuffs.Add(f));
+
             context.SaveChanges(); 
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

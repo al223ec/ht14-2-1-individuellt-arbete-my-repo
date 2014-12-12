@@ -57,5 +57,11 @@ namespace FoodJournal.Domain.DAL
             TEntity entityToDelete = _set.Find(id);
             _set.Remove(entityToDelete);
         }
+
+
+        public IEnumerable<TEntity> GetAll()
+        {
+            return _context.Set<TEntity>().ToList(); 
+        }
     }
 }

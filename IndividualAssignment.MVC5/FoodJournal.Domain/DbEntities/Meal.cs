@@ -14,6 +14,6 @@ namespace FoodJournal.Domain
         public MealType MealType { get; set; }
         public string Name { get; set; }
         public DateTime Time { get; set; }
-        public virtual ICollection<Foodstuff> Foodstuffs { get; set; } 
+        public virtual ICollection<MealFoodstuffEntry> FoodstuffMeals { get; set; } 
     }
 }

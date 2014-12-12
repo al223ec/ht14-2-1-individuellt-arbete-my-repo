@@ -1,7 +1,6 @@
 ﻿@model FoodJournal.Domain.Meal
 
-@Html.Partial("_MealForm")
-
+@Html.Partial("_MealForm", new FoodJournal.Domain.Meal())
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

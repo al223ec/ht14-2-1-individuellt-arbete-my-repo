@@ -18,5 +18,7 @@ namespace FoodJournal.Domain.DAL
         void Add(TEntity entityToAdd);
         void Update(TEntity entityToUpdate);
         void Remove(object id);
+
+        IEnumerable<TEntity> GetAll(); 
     }
 }

@@ -10,12 +10,22 @@ namespace FoodJournal.Domain.DAL
     {
         private FoodJournalContext _context = new FoodJournalContext();
         private IRepository<Foodstuff> _foodstuffRepository;
+        private IRepository<Meal> _mealRepository;
+        private IRepository<NutrientValues> _nutrientValuesRepository;
 
         public IRepository<Foodstuff> FoodstuffRepository
         {
             get { return _foodstuffRepository ?? (_foodstuffRepository = new RepositoryBase<Foodstuff>(_context)); }
         }
 
+        public IRepository<Meal> MealRepository
+        {
+            get { return _mealRepository ?? (_mealRepository = new RepositoryBase<Meal>(_context)); }
+        }
+        public IRepository<NutrientValues> NutrientValuesRepository
+        {
+            get { return _nutrientValuesRepository ?? (_nutrientValuesRepository = new RepositoryBase<NutrientValues>(_context)); }
+        }
 
         public void Save()
         {

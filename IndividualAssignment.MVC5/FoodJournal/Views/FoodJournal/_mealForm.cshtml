@@ -25,11 +25,13 @@
         </div>
         <div class="form-group">
             <div class="col-md-10">
+                <!--
                 <table>
                     <tr>
+                    
                         @{
                         int cnt = 0;
-                        List<FoodJournal.ViewModels.MealFoodstuffData> foodstuffs = ViewBag.Foodstuffs;
+                        List<FoodJournal.ViewModels.MealFoodstuffEntryData> foodstuffs = ViewBag.Foodstuffs;
 
                         foreach (var foodstuff in foodstuffs)
                         {
@@ -47,20 +49,13 @@
                                     }
                                 @:</tr>
                             }
-                </table>
+                </table>-->
             </div>
         </div>
-
-
-
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <input type="submit" value="Create" class="btn btn-default" />
                     </div>
                 </div>
             </div>
-}
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
 }

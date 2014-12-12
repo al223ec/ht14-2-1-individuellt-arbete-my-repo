@@ -14,5 +14,9 @@ namespace FoodJournal.Domain
 
         IEnumerable<Foodstuff> GetFoodstuff();
 
+        NutrientValues GetNutrientValues(Foodstuff foodstuff);
+
+        void SaveMeal(Meal meal); 
+
     }
 }

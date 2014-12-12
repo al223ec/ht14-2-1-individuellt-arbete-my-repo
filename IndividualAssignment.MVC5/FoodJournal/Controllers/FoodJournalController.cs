@@ -23,6 +23,9 @@ namespace FoodJournal.Controllers
         // GET: FoodJournal
         public ActionResult Index()
         {
+            var foodstuff = _service.GetFoodstuff().FirstOrDefault(f => f.Number == 29);
+            _service.GetNutrientValues(foodstuff);
+
             PopulateMealFoodstuffData(new Meal()); 
             return View(new List<Meal>());
         }

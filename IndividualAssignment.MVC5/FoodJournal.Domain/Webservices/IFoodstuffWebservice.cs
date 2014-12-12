@@ -6,5 +6,6 @@ namespace FoodJournal.Domain.Webservices
     {
         IEnumerable<Foodstuff> GetFoodstuff();
         IEnumerable<Foodstuff> GetFoodstuff(int number);
+        NutrientValues GetNutrientValues(int number); 
     }
 }

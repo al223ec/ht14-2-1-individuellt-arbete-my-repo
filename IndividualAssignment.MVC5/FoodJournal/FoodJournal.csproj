@@ -117,6 +117,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FoodJournalController.cs" />
+    <Compile Include="Controllers\FoodstuffsController.cs" />
     <Compile Include="HtmlHelpers\HtmlDropDownExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -160,10 +161,14 @@
     <Content Include="Views\FoodJournal\Index.cshtml" />
     <Content Include="Views\FoodJournal\_MealForm.cshtml" />
     <Content Include="Views\FoodJournal\Create.cshtml" />
+    <Content Include="Views\Foodstuffs\Create.cshtml" />
+    <Content Include="Views\Foodstuffs\Delete.cshtml" />
+    <Content Include="Views\Foodstuffs\Details.cshtml" />
+    <Content Include="Views\Foodstuffs\Edit.cshtml" />
+    <Content Include="Views\Foodstuffs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

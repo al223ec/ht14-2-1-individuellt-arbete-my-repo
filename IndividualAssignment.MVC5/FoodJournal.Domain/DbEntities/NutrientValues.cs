@@ -15,78 +15,78 @@ namespace FoodJournal.Domain
         public int FoodstuffID { get; set; }
         public virtual Foodstuff Foodstuff { get; set; }
 
-        public int EnergyKj { get; set; }
-        public int EnergyKcal { get; set; }
-        public int Protein { get; set; }
-        public int Fat { get; set; }
+        public decimal EnergyKj { get; set; }
+        public decimal EnergyKcal { get; set; }
+        public decimal Protein { get; set; }
+        public decimal Fat { get; set; }
 
-        public int Carbohydrates { get; set; }
-        public int Fibres { get; set; }
-        public int Salt { get; set; }
-        public int Ash { get; set; }
-        public int Water { get; set; }
-        public int Alcohol { get; set; }
+        public decimal Carbohydrates { get; set; }
+        public decimal Fibres { get; set; }
+        public decimal Salt { get; set; }
+        public decimal Ash { get; set; }
+        public decimal Water { get; set; }
+        public decimal Alcohol { get; set; }
         #region Carbohydrates
-        public int Monosaccharides { get; set; }
-        public int Disaccharides { get; set; }
-        public int Saccharose { get; set; }
-        public int Wholegrain { get; set; }
+        public decimal Monosaccharides { get; set; }
+        public decimal Disaccharides { get; set; }
+        public decimal Saccharose { get; set; }
+        public decimal Wholegrain { get; set; }
         #endregion
         #region FattyAcids
-        public int SaturatedFattyAcids { get; set; }
-        public int FattyAcid40100 { get; set; }
-        public int FattyAcid120 { get; set; }
-        public int FattyAcid140 { get; set; }
-        public int FattyAcid160 { get; set; }
-        public int FattyAcid180 { get; set; }
-        public int FattyAcid200 { get; set; }
-        public int MonounsaturatedFattyAcids { get; set; }
-        public int FattyAcid161 { get; set; }
-        public int FattyAcid181 { get; set; }
-        public int SumPolyunsaturatedFattyAcids { get; set; }
-        public int N6FattyAcids { get; set; }
-        public int FattyAcid182 { get; set; }
-        public int FattyAcid204 { get; set; }
-        public int N3FattyAcids { get; set; }
-        public int FattyAcid183 { get; set; }
-        public int LongN3FattyAcids { get; set; }
-        public int Epa { get; set; }
-        public int Dpa { get; set; }
-        public int Dha { get; set; }
-        public int TransFattyAcids { get; set; }
+        public decimal SaturatedFattyAcids { get; set; }
+        public decimal FattyAcid40100 { get; set; }
+        public decimal FattyAcid120 { get; set; }
+        public decimal FattyAcid140 { get; set; }
+        public decimal FattyAcid160 { get; set; }
+        public decimal FattyAcid180 { get; set; }
+        public decimal FattyAcid200 { get; set; }
+        public decimal MonounsaturatedFattyAcids { get; set; }
+        public decimal FattyAcid161 { get; set; }
+        public decimal FattyAcid181 { get; set; }
+        public decimal SumPolyunsaturatedFattyAcids { get; set; }
+        public decimal N6FattyAcids { get; set; }
+        public decimal FattyAcid182 { get; set; }
+        public decimal FattyAcid204 { get; set; }
+        public decimal N3FattyAcids { get; set; }
+        public decimal FattyAcid183 { get; set; }
+        public decimal LongN3FattyAcids { get; set; }
+        public decimal Epa { get; set; }
+        public decimal Dpa { get; set; }
+        public decimal Dha { get; set; }
+        public decimal TransFattyAcids { get; set; }
         #endregion
         #region Cholesterol
-        public int Cholesterol { get; set; }
+        public decimal Cholesterol { get; set; }
         #endregion
         #region Fat-soluble  vitaminer
-        public int RetinolEquivalents { get; set; }
-        public int Retinol { get; set; }
-        public int Betacarotene { get; set; }
-        public int VitaminD { get; set; }
-        public int VitaminE { get; set; }
-        public int VitaminK { get; set; }
+        public decimal RetinolEquivalents { get; set; }
+        public decimal Retinol { get; set; }
+        public decimal Betacarotene { get; set; }
+        public decimal VitaminD { get; set; }
+        public decimal VitaminE { get; set; }
+        public decimal VitaminK { get; set; }
         #endregion
         #region Water-soluble vitamins
-        public int Timamine { get; set; }
-        public int Riboflavin { get; set; }
-        public int VitaminC { get; set; }
-        public int Niacin { get; set; }
-        public int NiacinEquivalents { get; set; }
-        public int VitaminB6 { get; set; }
-        public int VitaminB12 { get; set; }
-        public int Phosphorous { get; set; }
-        public int Folate { get; set; }
+        public decimal Timamine { get; set; }
+        public decimal Riboflavin { get; set; }
+        public decimal VitaminC { get; set; }
+        public decimal Niacin { get; set; }
+        public decimal NiacinEquivalents { get; set; }
+        public decimal VitaminB6 { get; set; }
+        public decimal VitaminB12 { get; set; }
+        public decimal Phosphorous { get; set; }
+        public decimal Folate { get; set; }
         #endregion
         #region Minerals
-        public int Iodine { get; set; }
-        public int Trash { get; set; }
-        public int Iron { get; set; }
-        public int Calcium { get; set; }
-        public int Potassium { get; set; }
-        public int Magnesium { get; set; }
-        public int Sodium { get; set; }
-        public int Selenium { get; set; }
-        public int Zink { get; set; }
+        public decimal Iodine { get; set; }
+        public decimal Trash { get; set; }
+        public decimal Iron { get; set; }
+        public decimal Calcium { get; set; }
+        public decimal Potassium { get; set; }
+        public decimal Magnesium { get; set; }
+        public decimal Sodium { get; set; }
+        public decimal Selenium { get; set; }
+        public decimal Zink { get; set; }
         #endregion
     }
 }

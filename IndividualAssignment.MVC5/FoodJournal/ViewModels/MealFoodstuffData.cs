@@ -5,10 +5,12 @@ using System.Web;
 
 namespace FoodJournal.ViewModels
 {
-    public class MealFoodstuffData
+    public class MealFoodstuffEntryData
     {
         public int FoodstuffID { get; set; }
         public string Name { get; set; }
         public bool Selected { get; set; }
+
+        public int Weight { get; set; }
     }
 }

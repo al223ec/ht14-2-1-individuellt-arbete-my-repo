@@ -36,7 +36,7 @@ namespace FoodJournal.Domain
         public IEnumerable<string> GetFoodstuffNames()
         {
             return _unitOfWork.FoodstuffRepository
-                .Get()
+                .GetAll()
                 .Select(u => u.Name)
                 .OrderBy(s => s)
                 .ToList();
@@ -44,7 +44,28 @@ namespace FoodJournal.Domain
 
         public IEnumerable<Foodstuff> GetFoodstuff()
         {
-            return _unitOfWork.FoodstuffRepository.Get(); 
+            return _unitOfWork.FoodstuffRepository.GetAll(); 
+        }
+
+
+        public NutrientValues GetNutrientValues(Foodstuff foodstuff)
+        {
+
+            if (foodstuff.NutrientValues == null)
+            { 
+                NutrientValues nutrientValues = _webservice.GetNutrientValues(foodstuff.Number);
+                foodstuff.NutrientValues = nutrientValues;
+                _unitOfWork.NutrientValuesRepository.Add(nutrientValues);
+                _unitOfWork.Save();
+
+                return nutrientValues;
+            }
+            return foodstuff.NutrientValues;
+        }
+
+        public void SaveMeal(Meal meal)
+        {
+            throw new NotImplementedException();
         }
 
         #region IDisposable
@@ -70,5 +91,7 @@ namespace FoodJournal.Domain
         }
 
         #endregion
+
+
     }
 }

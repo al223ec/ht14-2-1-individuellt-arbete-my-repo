@@ -13,6 +13,6 @@ namespace FoodJournal.Domain
         public string Name { get; set; }
         public int Number { get; set; }
         public virtual NutrientValues NutrientValues { get; set; }
-        public virtual ICollection<Meal> Meals { get; set; }    
+        public virtual ICollection<MealFoodstuffEntry> FoodstuffMeals { get; set; } 
     }
 }
