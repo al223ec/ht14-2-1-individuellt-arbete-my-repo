@@ -20,15 +20,9 @@ namespace FoodJournal.Api.Controllers
         {
             _service = service;
         }
-        [Route("getall")]
-        [HttpGet]
-        public IHttpActionResult Get()
-        {
-            return Ok(_service.GetFoodstuffNames());
-        }
 
-
-        [Route("find/{query}")]
+        [AllowCrossSiteJson]
+        [Route("find/{query?}")]
         [HttpGet]
         public IHttpActionResult Find(string query)
         {

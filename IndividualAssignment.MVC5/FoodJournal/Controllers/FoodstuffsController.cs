@@ -121,6 +121,7 @@ namespace FoodJournal.Controllers
             return RedirectToAction("Index");
         }
 
+        #region dispose 
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -129,5 +130,7 @@ namespace FoodJournal.Controllers
             }
             base.Dispose(disposing);
         }
+        #endregion
+
     }
 }

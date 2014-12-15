@@ -23,9 +23,6 @@ namespace FoodJournal.Controllers
         // GET: FoodJournal
         public ActionResult Index()
         {
-            var names = _service.GetFoodstuffNames("Ä"); 
-            
-
             PopulateMealFoodstuffData(new Meal()); 
             return View(new List<Meal>());
         }
@@ -44,17 +41,17 @@ namespace FoodJournal.Controllers
         {
             var allFoodstuffs = _service.GetFoodstuff();
             //var mealFoodstuffs = new HashSet<int>(meal.Foodstuffs.Select(f => f.ID));
-            var viewModel = new List<MealFoodstuffEntryData>();
-
+            var viewModel = new List<MealFoodstuffEntryCreate>();
+            /*
             foreach (var foodstuff in allFoodstuffs)
             {
-                viewModel.Add(new MealFoodstuffEntryData
+                viewModel.Add(new MealFoodstuffEntryCreate
                 {
                     FoodstuffID = foodstuff.ID,
                     Name = foodstuff.Name,
                 });
             }
-            ViewBag.Foodstuffs = viewModel;
+            ViewBag.Foodstuffs = viewModel;*/
         }
 
         // POST: FoodJournal/Create
@@ -79,5 +76,15 @@ namespace FoodJournal.Controllers
                 return View();
             }
         }
+
+        #region IDisposable
+
+        protected override void Dispose(bool disposing)
+        {
+            _service.Dispose();
+            base.Dispose(disposing);
+        }
+
+        #endregion
     }
 }

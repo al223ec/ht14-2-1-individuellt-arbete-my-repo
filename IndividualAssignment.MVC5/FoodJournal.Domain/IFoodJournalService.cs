@@ -10,8 +10,6 @@ namespace FoodJournal.Domain
     {
         IEnumerable<string> GetFoodstuffNames(string term);
 
-        IEnumerable<string> GetFoodstuffNames(); 
-
         IEnumerable<Foodstuff> GetFoodstuff();
 
         NutrientValues GetNutrientValues(Foodstuff foodstuff);

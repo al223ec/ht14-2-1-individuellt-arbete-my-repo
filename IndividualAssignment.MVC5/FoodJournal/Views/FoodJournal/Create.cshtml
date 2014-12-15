@@ -1,7 +1,80 @@
-﻿@model FoodJournal.Domain.Meal
+﻿@model FoodJournal.ViewModels.MealFoodstuffEntryCreate
 
-@Html.Partial("_MealForm", new FoodJournal.Domain.Meal())
+@{
+    ViewBag.Title = "Create";
+}
+
+ @section Head{
+     @Styles.Render("~/Content/themes/base/css")
+ }
+
+<h2>Create</h2>
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Create Meal</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FoodstuffName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FoodstuffName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FoodstuffName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Weight, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Weight, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+@if (Model != null && Model.SelectedFoodstuffs != null)
+{
+    <div>
+        <h2>
+            Selected Foodstuffs
+        </h2>
+        @Html.DisplayFor(m => m.SelectedFoodstuffs)
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryui")
+
+    <script>
+    $(function () {
+        $("#FoodstuffName").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "http://localhost:2250/api/foodstuffnames/find/" + request.term,
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { value: item };
+                        }))
+                    }
+                })
+            },
+            //Require at least one character from the user.
+            minLength: 3
+        });
+    });
+</script>
 }

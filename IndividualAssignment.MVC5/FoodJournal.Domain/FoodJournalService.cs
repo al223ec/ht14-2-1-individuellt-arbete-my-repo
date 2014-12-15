@@ -15,9 +15,7 @@ namespace FoodJournal.Domain
 
         public FoodJournalService()
             : this(new UnitOfWork(), new FoodstuffWebservice())
-        {
-            // Empty!
-        }
+        { }
 
         public FoodJournalService(IUnitOfWork unitOfWork, IFoodstuffWebservice webservice)
         {
@@ -30,18 +28,9 @@ namespace FoodJournal.Domain
             return _unitOfWork.FoodstuffRepository
                 .Get(u => u.Name.Contains(term))
                 .Select(u => u.Name)
-                .OrderBy(s => s)
+                .OrderByDescending(s => s.IndexOf(term[0]))
                 .ToList();
         }
-        public IEnumerable<string> GetFoodstuffNames()
-        {
-            return _unitOfWork.FoodstuffRepository
-                .GetAll()
-                .Select(u => u.Name)
-                .OrderBy(s => s)
-                .ToList();
-        }
-
         public IEnumerable<Foodstuff> GetFoodstuff()
         {
             return _unitOfWork.FoodstuffRepository.GetAll(); 
